@@ -7,10 +7,10 @@ const Medicines = ({ medicines }) => {
     <>
       <div className={styles.root}>
         {
-        medicines.length == 1 && <div>looks like you have {medicines.length} medicine!</div>
+        medicines.length === 1 && <div>looks like you have {medicines.length} medicine!</div>
         }
         {
-        medicines.length == 0 && <div>looks like you have no medicine!</div>}
+        medicines.length === 0 && <div>looks like you have no medicine!</div>}
         {
         medicines.length >= 2 && <div>looks like you have {medicines.length} medicines!</div>
         }
