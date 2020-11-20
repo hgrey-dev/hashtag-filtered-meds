@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./search.module.css";
 
-const Search = () => {
+const Search = (props) => {
+
+
   return (
     <div className={styles.root}>
       <input
+        onChange= {props.onChange}
         aria-label="search"
         className={styles.search}
         placeholder="filter meds"
