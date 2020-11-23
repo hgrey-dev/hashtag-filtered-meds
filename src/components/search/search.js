@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./search.module.css";
 
+//use setSearch state to conect search component to filteredmedicines function
+//create onchange event listener
 const Search = ({ setSearch }) => {
   return (
     <div className={styles.root}>

@@ -8,8 +8,10 @@ import { useState } from "react";
 function App() {
   //on page load, get our hardcoded medicines from a file
   const [medicines] = useState(originalMedicines);
+  //asign "useState" to search and setSearch. To be used in filter function and search component
   const [search, setSearch] = useState("");
 
+  //filter the original medicines by name or company. 
   const filteredMedicine = medicines.filter((x) => {
     return (
       x.name.toLowerCase().includes(search.toLowerCase()) ||

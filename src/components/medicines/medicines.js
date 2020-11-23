@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./medicines.module.css";
 import Card from "../Card/Card";
 
+//use filteredMedicine function to return list of filtered medicines
+//Add syntactic message nicities
 const Medicines = ({ filteredMedicine }) => {
   return (
     <>

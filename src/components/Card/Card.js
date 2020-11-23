@@ -1,3 +1,4 @@
+// create reusable card component with styling
 import React from "react";
 const mystlez = {
   padding: "15px",
