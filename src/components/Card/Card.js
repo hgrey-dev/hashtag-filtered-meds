@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <div className={styles.mystlez}>
       <a
-        href={`https://duckduckgo.com/?q=${props.name}&t=braveed&ia=web`}
+        href={`https://duckduckgo.com/?q=${props.name}&t=braveed&ia=web`}  rel="noreferrer"
         target="_blank"
       >
         {<h3>{props.name}</h3>}
