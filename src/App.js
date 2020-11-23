@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   //on page load, get our hardcoded medicines from a file
-  const [medicines, setMedicines] = useState(originalMedicines);
+  const [medicines] = useState(originalMedicines);
   const [search, setSearch] = useState("");
 
   const filteredMedicine = medicines.filter((x) => {
