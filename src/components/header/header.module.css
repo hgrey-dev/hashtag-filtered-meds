@@ -7,3 +7,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.h3{
+  display: flex;
+  margin: 0 auto;
+}
+.p{
+  padding: 10px;
+}
