@@ -5,25 +5,25 @@ import originalMedicines from "./medicines.json";
 import Search from "./components/search/search";
 import { useState } from "react";
 
-
 function App() {
   //on page load, get our hardcoded medicines from a file
   const [medicines, setMedicines] = useState(originalMedicines);
-  const [search, setSearch]= useState('');
+  const [search, setSearch] = useState("");
 
-  const filterMeds = (filterTerm) => {
-      const newMedsList = medicines.filter((x) => x.name === filterTerm || x.company === filterTerm);
-      setMedicines(newMedsList);
-      setSearch(search)
-      console.log(filterTerm)
-  }
+  const filteredMedicine = medicines.filter((x) => {
+    return (
+      x.name.toLowerCase().includes(search.toLowerCase()) ||
+      x.company.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
   return (
     <>
       <Header>
-        <Search onChange={filterMeds}/>
+        <Search setSearch={setSearch} />
       </Header>
       <div className="mild-defaults">
-        <Medicines medicines={medicines} />
+        <Medicines filteredMedicine={filteredMedicine} />
       </div>
     </>
   );
